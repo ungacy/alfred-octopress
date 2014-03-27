@@ -12,4 +12,16 @@ Set the `OCTOPATH` variable to your octopress installation directory and `EDITOR
   blog generate
   #Launch static page generation via Jekyll.
 ```
-Alfred workflow bundle can be downloaded [here](https://github.com/Temikus/alfred-octopress/raw/master/bundle/Octopress%20publish.alfredworkflow).
+
+add by ungacy
+start
+add codes below to auto deploy to github.
+
+```
+git add . 
+git commit -am $(date +%Y-%m-%d)
+git push origin source
+rake deploy >> /dev/null
+```
+end
+Alfred workflow bundle can be downloaded [here](https://github.com/ungacy/alfred-octopress/blob/master/bundle/Octopress%20publish.alfredworkflow).
