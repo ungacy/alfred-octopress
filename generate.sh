@@ -10,6 +10,10 @@ fi
 cd $OCTOPATH >> /dev/null
 rvm use 1.9.3@octopress >> /dev/null
 rake generate >> /dev/null
+git add . 
+git commit -am $(date +%Y-%m-%d)
+git push origin source
+rake deploy >> /dev/null
 
 if [[ $? -eq 0 ]] ; then
     echo "Blog generated successfully!"
